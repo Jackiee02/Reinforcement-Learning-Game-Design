@@ -42,6 +42,7 @@ Install dependencies using pip:
 pip install gym gym-super-mario-bros torch numpy matplotlib pandas
 ```
 ## Project Structure
+```
 .
 ├── duel_dqn.py           # Main Dueling DQN agent implementation
 ├── eval.py               # Evaluation script for the trained agent
@@ -49,7 +50,7 @@ pip install gym gym-super-mario-bros torch numpy matplotlib pandas
 ├── curve_picture.py      # Plotting script for training curves (score, loss, time)
 ├── train.log             # Log file with training progress
 └── README.md             # Project documentation
-
+```
 ### Main Components
 
 1. **Dueling DQN Agent** (`duel_dqn.py`):
