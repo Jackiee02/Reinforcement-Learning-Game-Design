@@ -40,7 +40,7 @@ Install dependencies using pip:
 
 ```bash
 pip install gym gym-super-mario-bros torch numpy matplotlib pandas
-
+```
 ## Project Structure
 .
 ├── duel_dqn.py           # Main Dueling DQN agent implementation
