@@ -41,6 +41,7 @@ Install dependencies using pip:
 ```bash
 pip install gym gym-super-mario-bros torch numpy matplotlib pandas
 
+## Project Structure
 .
 ├── duel_dqn.py           # Main Dueling DQN agent implementation
 ├── eval.py               # Evaluation script for the trained agent
@@ -48,4 +49,28 @@ pip install gym gym-super-mario-bros torch numpy matplotlib pandas
 ├── curve_picture.py      # Plotting script for training curves (score, loss, time)
 ├── train.log             # Log file with training progress
 └── README.md             # Project documentation
+
+### Main Components
+
+1. **Dueling DQN Agent** (`duel_dqn.py`):
+   - Implements the Dueling DQN model for reinforcement learning.
+   - Uses a custom neural network with convolutional layers, a fully connected layer, and separate value and advantage networks.
+
+2. **Evaluation** (`eval.py`):
+   - Evaluates the trained agent by running it through the game environment.
+   - Displays real-time scores and game progress.
+
+3. **Wrappers** (`wrappers.py`):
+   - Custom wrappers to modify the behavior of the gym environment, such as frame skipping, reward clipping, and state stacking.
+
+4. **Training Curve Visualization** (`curve_picture.py`):
+   - Extracts and plots the training logs for score, loss, and time spent per epoch.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/dueling-dqn-mario
+   cd dueling-dqn-mario
 
