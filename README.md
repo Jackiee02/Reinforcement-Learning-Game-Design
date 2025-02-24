@@ -1,24 +1,42 @@
-# Dueling DQN for Super Mario Bros
+# Super Mario Bros - Dueling DQN Agent
 
-This project implements a reinforcement learning agent to play the classic video game *Super Mario Bros* using the Dueling Deep Q-Network (DQN) algorithm. The agent learns to navigate through the game, overcoming obstacles and enemies, by maximizing its score. The project leverages the gym library for the environment, PyTorch for the neural network, and several custom wrappers to enhance training.
+This project implements a reinforcement learning agent that uses the Dueling DQN architecture to play the game *Super Mario Bros*. The agent learns to navigate through the game, overcoming obstacles and enemies, by maximizing its score. The project leverages the *gym-super-mario-bros* environment and PyTorch to implement and train the model.
 
 ## Table of Contents
-- [Overview](#overview)
+
+- [Project Overview](#project-overview)
 - [Dependencies](#dependencies)
+- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Model Architecture](#model-architecture)
-- [Training](#training)
+- [Training Process](#training-process)
 - [Evaluation](#evaluation)
+- [Technical Details](#technical-details)
 - [Results](#results)
+- [Challenges and Solutions](#challenges-and-solutions)
 - [Future Work](#future-work)
-- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
-## Overview
-This project focuses on applying Q-learning, specifically the Dueling DQN architecture, to train an AI agent to play *Super Mario Bros*. The Dueling DQN improves the stability and efficiency of the learning process by separating the state value and action advantages. The agent learns to make optimal decisions by interacting with the environment, using both positive and negative rewards to refine its policy.
+## Project Overview
+
+This project utilizes the Dueling DQN architecture for training an agent to play *Super Mario Bros*. The agent learns by interacting with the environment and adjusting its policy based on the rewards it receives. The main objective is to maximize the cumulative score by efficiently navigating through the game levels.
+
+Key highlights:
+- **Dueling DQN architecture** improves learning efficiency by splitting the Q-value into state value and action advantage.
+- **Gym environment** used for the *Super Mario Bros* game simulation.
+- **PyTorch** is employed for training the neural network.
 
 ## Dependencies
-The project requires several Python packages. You can install all dependencies by using the `requirements.txt` file provided.
+
+The project requires the following Python packages:
+- `gym`
+- `gym-super-mario-bros`
+- `torch`
+- `numpy`
+- `matplotlib`
+- `pandas`
+
+Install dependencies using pip:
 
 ```bash
-pip install -r requirements.txt
+pip install gym gym-super-mario-bros torch numpy matplotlib pandas
