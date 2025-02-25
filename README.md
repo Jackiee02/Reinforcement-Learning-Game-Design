@@ -1,4 +1,4 @@
-🍄 # Super Mario Bros - Dueling DQN Agent
+# 🍄Super Mario Bros - Dueling DQN Agent
 
 This project implements a reinforcement learning agent that uses the Dueling DQN architecture to play the game *Super Mario Bros*. The agent learns to navigate through the game, overcoming obstacles and enemies, by maximizing its score. The project leverages the *gym-super-mario-bros* environment and PyTorch to implement and train the model.
 
