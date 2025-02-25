@@ -132,9 +132,11 @@ The agent successfully learns to navigate through multiple levels, achieving hig
 
 ## Results
 The visualization interface of the Mario game is as follows:
+
 ![Mario](https://github.com/user-attachments/assets/11217000-b7d4-4e98-af30-c1afcf61d3b9)
 
 The Mario score result output visualization interface is as follows:
+
 ![Score](https://github.com/user-attachments/assets/3a33ad60-3ae4-4559-b140-31c4eb0b36e0)
 
 
