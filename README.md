@@ -7,13 +7,10 @@ This project implements a reinforcement learning agent that uses the Dueling DQN
 - [Project Overview](#project-overview)
 - [Dependencies](#dependencies)
 - [Project Structure](#project-structure)
-- [Installation](#installation)
 - [Usage](#usage)
-- [Training Process](#training-process)
+- [Model Architecture](#model-architecture)
 - [Evaluation](#evaluation)
-- [Technical Details](#technical-details)
 - [Results](#results)
-- [Challenges and Solutions](#challenges-and-solutions)
 - [Future Work](#future-work)
 - [License](#license)
 
@@ -82,7 +79,6 @@ pip install -r requirements.txt
    ```bash
    python eval.py <path_to_trained_model>
    ```
-3. 
 
 ## Model Architecture
 The Dueling DQN model consists of the following components:
@@ -118,4 +114,29 @@ class DuelingDQN(nn.Module):
         q = v + (adv - 1 / adv.shape[-1] * adv.max(-1, True)[0])
         return q
 ```
-   
+
+## Evaluation
+During evaluation, the agent’s performance is visualized in real-time with the score, stage, and actions taken. Training logs and graphs of loss, score, and time spent are saved for further analysis.
+   ```bash
+   python curve_picture.py 
+   ```
+
+## Results
+The agent successfully learns to navigate through multiple levels, achieving higher scores over time. Graphs showing the loss, score, and time spent during training can be found in the repository.
+- **Score vs Epoch:** Demonstrates how the agent’s score improves with training.
+- **Loss vs Epoch:** Shows the reduction in loss over time.
+- **Time Spent vs Epoch:** Illustrates the efficiency of training.
+
+## Future Work
+There are several opportunities for future improvements and extensions to this project:
+
+1. **Double DQN:**
+   Implementing Double DQN would further reduce the overestimation bias and improve training stability.
+2. **Prioritized Experience Replay:**
+   Using prioritized experience replay would allow the agent to learn more efficiently by sampling more important experiences more frequently.
+3. **New Game Environments:**
+   The agent could be trained on different environments or more challenging levels to test its generalization and improve its learning capabilities.
+4. **Curriculum Learning:**
+   A curriculum learning approach could be used to gradually increase the difficulty of the levels, making it easier for the agent to learn the optimal strategies.
+
+## License
