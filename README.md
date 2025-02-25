@@ -12,7 +12,6 @@ This project implements a reinforcement learning agent that uses the Dueling DQN
 - [Evaluation](#evaluation)
 - [Results](#results)
 - [Future Work](#future-work)
-- [License](#license)
 
 ## Project Overview
 
@@ -118,16 +117,19 @@ During evaluation, the agent’s performance is visualized in real-time with the
    ```
 The agent successfully learns to navigate through multiple levels, achieving higher scores over time. Graphs showing the loss, score, and time spent during training can be found in the repository.
 - **Score vs Epoch:** Demonstrates how the agent’s score improves with training.
+- 
   ![score_vs_epoch](https://github.com/user-attachments/assets/011bba92-3220-43fb-8769-9bab3b592235)
 
 
 
 - **Loss vs Epoch:** Shows the reduction in loss over time.
+- 
   ![loss_vs_epoch](https://github.com/user-attachments/assets/08d0f8ff-539c-4d6f-bef2-5593cf2b6442)
 
 
 
 - **Time Spent vs Epoch:** Illustrates the efficiency of training.
+- 
   ![time_spent_vs_epoch](https://github.com/user-attachments/assets/e00ac0c8-c84e-488b-9ecb-ee78719916f9)
 
 ## Results
@@ -152,4 +154,3 @@ There are several opportunities for future improvements and extensions to this p
 4. **Curriculum Learning:**
    A curriculum learning approach could be used to gradually increase the difficulty of the levels, making it easier for the agent to learn the optimal strategies.
 
-## License
