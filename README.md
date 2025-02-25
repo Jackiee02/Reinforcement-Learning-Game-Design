@@ -29,17 +29,22 @@ Key highlights:
 ## Dependencies
 
 The project requires the following Python packages:
-- `gym`
-- `gym-super-mario-bros`
-- `torch`
-- `numpy`
-- `matplotlib`
-- `pandas`
+- `gym: 0.21.0`
+- `gym-super-mario-bros: 7.4.0`
+- `torch: 1.13.1+cu116`
+- `numpy: 1.24.4`
+- `opencv-python: 4.11.0.86`
+- `matplotlib: 3.7.5`
+- `pandas: 2.0.3`
+- `scipy: 1.10.1`
+- `pygame: 2.6.1`
+- `pytorch libraries: torchaudio, torchvision`
+- `other libraries: tqdm, pandas, pillow, and others.`
 
 Install dependencies using pip:
 
 ```bash
-pip install gym gym-super-mario-bros torch numpy matplotlib pandas
+pip install -r requirements.txt
 ```
 ## Project Structure
 ```
@@ -67,27 +72,6 @@ pip install gym gym-super-mario-bros torch numpy matplotlib pandas
 4. **Training Curve Visualization** (`curve_picture.py`):
    - Extracts and plots the training logs for score, loss, and time spent per epoch.
 
-## Requirements
-
-Here is the list of dependencies:
-gym: 0.21.0
-gym-super-mario-bros: 7.4.0
-torch: 1.13.1+cu116
-numpy: 1.24.4
-opencv-python: 4.11.0.86
-matplotlib: 3.7.5
-pandas: 2.0.3
-scipy: 1.10.1
-pygame: 2.6.1
-pytorch libraries: torchaudio, torchvision
-other libraries: tqdm, pandas, pillow, and others.
-
-The project requires several Python packages. You can install all dependencies by using the **requirements.txt** file provided.
-```bash
-pip install -r requirements.txt
-```
-
-
 ## Usage
 
 1. **Train the Model:** To start training the agent, run the following command:
@@ -104,12 +88,16 @@ pip install -r requirements.txt
 The Dueling DQN model consists of the following components:
 
 **Convolutional Layers:** These extract features from the game frames (input size: 84x84x4).
+
 **Fully Connected Layer:** Combines extracted features and prepares them for evaluation in the advantage and state value layers.
+
 **State Value Layer:** Represents the value of being in a particular state.
+
 **Advantage Layer:** Represents the relative advantage of each action.
+
 **Q-value Calculation:** Combines state value and advantage to compute the Q-value for each action.
 
-
+```bash
 class DuelingDQN(nn.Module):
     def __init__(self, n_frame, n_action, device):
         super(DuelingDQN, self).__init__()
@@ -129,5 +117,5 @@ class DuelingDQN(nn.Module):
         v = self.v(x)
         q = v + (adv - 1 / adv.shape[-1] * adv.max(-1, True)[0])
         return q
-
+```
    
