@@ -116,8 +116,6 @@ During evaluation, the agent’s performance is visualized in real-time with the
    ```bash
    python curve_picture.py 
    ```
-
-## Results
 The agent successfully learns to navigate through multiple levels, achieving higher scores over time. Graphs showing the loss, score, and time spent during training can be found in the repository.
 - **Score vs Epoch:** Demonstrates how the agent’s score improves with training.
   ![score_vs_epoch](https://github.com/user-attachments/assets/011bba92-3220-43fb-8769-9bab3b592235)
@@ -131,6 +129,13 @@ The agent successfully learns to navigate through multiple levels, achieving hig
 
 - **Time Spent vs Epoch:** Illustrates the efficiency of training.
   ![time_spent_vs_epoch](https://github.com/user-attachments/assets/e00ac0c8-c84e-488b-9ecb-ee78719916f9)
+
+## Results
+The visualization interface of the Mario game is as follows:
+![Mario](https://github.com/user-attachments/assets/11217000-b7d4-4e98-af30-c1afcf61d3b9)
+
+The Mario score result output visualization interface is as follows:
+![Score](https://github.com/user-attachments/assets/3a33ad60-3ae4-4559-b140-31c4eb0b36e0)
 
 
 ## Future Work
