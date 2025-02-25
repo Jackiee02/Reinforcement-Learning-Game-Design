@@ -120,13 +120,16 @@ During evaluation, the agent’s performance is visualized in real-time with the
 ## Results
 The agent successfully learns to navigate through multiple levels, achieving higher scores over time. Graphs showing the loss, score, and time spent during training can be found in the repository.
 - **Score vs Epoch:** Demonstrates how the agent’s score improves with training.
-  ![image](https://github.com/user-attachments/assets/567c73fb-1137-490a-84cb-16eb9637b693)
+  ![score_vs_epoch](https://github.com/user-attachments/assets/064c93b4-3d2d-4b3c-a4d0-ef81a6179797)
+
 
 - **Loss vs Epoch:** Shows the reduction in loss over time.
-  ![image](https://github.com/user-attachments/assets/913cd25d-7a5c-4c7b-b898-acef917ae433)
+  ![score_vs_epoch](https://github.com/user-attachments/assets/fb44470f-4bbf-41c1-b016-cbc12d71ab34)
+
 
 - **Time Spent vs Epoch:** Illustrates the efficiency of training.
-  ![image](https://github.com/user-attachments/assets/b762a66f-7bdb-4aaa-a1f0-01d4ac33d65a)
+  ![time_spent_vs_epoch](https://github.com/user-attachments/assets/e00ac0c8-c84e-488b-9ecb-ee78719916f9)
+
 
 ## Future Work
 There are several opportunities for future improvements and extensions to this project:
