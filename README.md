@@ -83,11 +83,11 @@ pip install -r requirements.txt
 ## Model Architecture
 The Dueling DQN model consists of the following components:
 
-**Convolutional Layers:** These extract features from the game frames (input size: 84x84x4).
-**Fully Connected Layer:** Combines extracted features and prepares them for evaluation in the advantage and state value layers.
-**State Value Layer:** Represents the value of being in a particular state.
-**Advantage Layer:** Represents the relative advantage of each action.
-**Q-value Calculation:** Combines state value and advantage to compute the Q-value for each action.
+- **Convolutional Layers:** These extract features from the game frames (input size: 84x84x4).
+- **Fully Connected Layer:** Combines extracted features and prepares them for evaluation in the advantage and state value layers.
+- **State Value Layer:** Represents the value of being in a particular state.
+- **Advantage Layer:** Represents the relative advantage of each action.
+- **Q-value Calculation:** Combines state value and advantage to compute the Q-value for each action.
 
 ```bash
 class DuelingDQN(nn.Module):
