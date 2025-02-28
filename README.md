@@ -24,7 +24,7 @@ Key highlights:
 
 ## Dependencies
 
-The project requires the following Python packages(Please refer to the requirements.txt file for details.):
+The project requires the following Python packages(Please refer to the **_requirements.txt_** file for details.):
 - `gym: 0.21.0`
 - `gym-super-mario-bros: 7.4.0`
 - `torch: 1.13.1+cu116`
