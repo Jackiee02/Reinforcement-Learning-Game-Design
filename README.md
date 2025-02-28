@@ -24,7 +24,7 @@ Key highlights:
 
 ## Dependencies
 
-The project requires the following Python packages:
+The project requires the following Python packages(Please refer to the requirements.txt file for details.):
 - `gym: 0.21.0`
 - `gym-super-mario-bros: 7.4.0`
 - `torch: 1.13.1+cu116`
@@ -45,12 +45,22 @@ pip install -r requirements.txt
 ## Project Structure
 ```
 .
-├── duel_dqn.py           # Main Dueling DQN agent implementation
-├── eval.py               # Evaluation script for the trained agent
-├── wrappers.py           # Custom gym wrappers to enhance training
-├── curve_picture.py      # Plotting script for training curves (score, loss, time)
-├── train.log             # Log file with training progress
-└── README.md             # Project documentation
+├── duel_dqn.py                 # Main Dueling DQN agent implementation
+├── eval.py                     # Evaluation script for the trained agent
+├── wrappers.py                 # Custom gym wrappers to enhance training
+├── curve_picture.py            # Plotting script for training curves (score, loss, time)
+├── requirements.txt            # List of required Python dependencies
+├── MarioModel.z01              # Part 1 of the compressed model
+├── MarioModel.z02              # Part 2 of the compressed model
+├── MarioModel.z03              # Part 3 of the compressed model
+├── MarioModel.zip              # Compressed model file (contains all parts)
+├── train.log                   # Log file with training progress
+├── loss_vs_epoch.png           # Plot of loss vs epoch
+├── score_vs_epoch.png          # Plot of score vs epoch
+├── time_spent_vs_epoch.png     # Plot of time spent vs epoch
+├── Mario.png                   # Image displaying Mario's game screen
+├── Score.png                   # Image showing the agent's score
+└── README.md                   # Project documentation
 ```
 ### Main Components
 
@@ -74,10 +84,20 @@ pip install -r requirements.txt
    ```bash
    python duel_dqn.py
    ```
+   And then, you can get three file:mario_q.pth, mario_q_target.pth and train.log
 2. **Evaluate the Model:** To test the performance of the trained agent, run:
    ```bash
    python eval.py <path_to_trained_model>
    ```
+   Here, the trained model is tested, and the Mario game interface along with its score is displayed through a visual interface.   
+3. **Evaluate the Model:**
+   If you want to evaluate my model, please：
+
+   (1) download **_MarioModel.z01, MarioModel.z02, MarioModel.z03_**, and **_MarioModel.zip_**,
+   
+   (2) place them in the same folder,
+   
+   (3) unzip **_MarioModel.zip_**.
 
 ## Model Architecture
 The Dueling DQN model consists of the following components:
@@ -117,19 +137,19 @@ During evaluation, the agent’s performance is visualized in real-time with the
    ```
 The agent successfully learns to navigate through multiple levels, achieving higher scores over time. Graphs showing the loss, score, and time spent during training can be found in the repository.
 - **Score vs Epoch:** Demonstrates how the agent’s score improves with training.
-- 
+ 
   ![score_vs_epoch](https://github.com/user-attachments/assets/011bba92-3220-43fb-8769-9bab3b592235)
 
 
 
 - **Loss vs Epoch:** Shows the reduction in loss over time.
-- 
+ 
   ![loss_vs_epoch](https://github.com/user-attachments/assets/08d0f8ff-539c-4d6f-bef2-5593cf2b6442)
 
 
 
 - **Time Spent vs Epoch:** Illustrates the efficiency of training.
-- 
+ 
   ![time_spent_vs_epoch](https://github.com/user-attachments/assets/e00ac0c8-c84e-488b-9ecb-ee78719916f9)
 
 ## Results
