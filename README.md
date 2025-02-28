@@ -90,7 +90,7 @@ pip install -r requirements.txt
    python eval.py <path_to_trained_model>
    ```
    Here, the trained model is tested, and the Mario game interface along with its score is displayed through a visual interface.   
-3. **Evaluate the Model:**
+3. **Evaluate My Training Model:**
    If you want to evaluate my model, please：
 
    (1) download **_MarioModel.z01, MarioModel.z02, MarioModel.z03_**, and **_MarioModel.zip_**,
@@ -98,6 +98,10 @@ pip install -r requirements.txt
    (2) place them in the same folder,
    
    (3) unzip **_MarioModel.zip_**.
+
+   If you want to view the training curves of my model, please：
+   
+   download my **_train.log_** and run it on **_curve_picture.py_** (！！！make sure not to download it into your project beforehand to avoid overwriting it when you train your model).
 
 ## Model Architecture
 The Dueling DQN model consists of the following components:
